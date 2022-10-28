@@ -40,10 +40,18 @@ h1{
 .btn:hover{
     background-image:linear-gradient(to left,#a5617a,#F78154);
 }
-input{
+.input{
     background-color: azure;
     width:100%;
     height:48px;
     margin-bottom: 10px;
     font-size:22px;
+}
+.text{
+    background-color: azure;
+    width:100%;
+    height: 58px;
+    margin-top: 10px;
+    font-size:18px;
+    border-radius: 10%;
 }
