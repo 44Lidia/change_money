@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>找零机器</title>
+</head>
+<link rel="stylesheet" href="找零.css">
+<body>
+    <h1>找零机器</h1>
+    <form name="form1" class="change_form">
+	    <h1>输入要找的零钱</h1>
+		<input name="input_money" class="input" type="text">
+		<br>
+		<input type="button" class="btn" onclick="change()" value="找零">
+	</form>	
+</body>
+<script>
+    function change(){
+    n = Number(document.form1.input_money.value);
+    num=[100,50,20,10,5,1];
+    i=0;
+    count=0
+    output_str="找零："
+    if(n>0){
+       for(i;i<num.length;i++){
+           count=Math.floor(n/num[i])
+           if(count!=0)
+           {
+              output_str+=num[i]+"元"+count+"张， ";
+           }
+           n=n%num[i]
+       }
+    }
+    window.alert(output_str);
+}
+</script>
+</html>
